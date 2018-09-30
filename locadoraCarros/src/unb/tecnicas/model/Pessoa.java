@@ -75,4 +75,15 @@ public class Pessoa {
                 ", tipoPessoa=" + tipoPessoa +
                 '}';
     }
+
+    public void imprime() {
+        System.out.print(
+                "id = " + id +
+                "\nnome = "  + nome +
+                "\nendereco = " + endereco +
+                "\nemail = " + email +
+                "\ntelefone = " + telefone +
+                "\ntipoPesso = " + tipoPessoa.getDescricao()
+        );
+    }
 }

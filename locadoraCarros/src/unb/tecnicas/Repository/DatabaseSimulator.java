@@ -1,5 +1,6 @@
 package unb.tecnicas.Repository;
 
+import unb.tecnicas.carga.ClienteCarga;
 import unb.tecnicas.model.Carro;
 import unb.tecnicas.model.Cliente;
 import unb.tecnicas.model.Locadora;
@@ -11,11 +12,17 @@ import java.util.List;
 public class DatabaseSimulator {
 
 
-    protected List<Carro> carroList;
+    private List<Carro> carroList = new ArrayList<>();
 
-    protected List<Transacao> transacaoList;
+    private List<Transacao> transacaoList = new ArrayList<>();
 
-    protected Locadora locadora;
+    private List<Cliente> clienteList = new ArrayList<>();
+
+    private Locadora locadora = new Locadora();
+
+    public DatabaseSimulator() {
+        clienteList.addAll(ClienteCarga.gerarClientes());
+    }
 
     public List<Cliente> getClienteList() {
         return clienteList;

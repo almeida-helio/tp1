@@ -47,10 +47,21 @@ public class PessoaFisica extends Pessoa{
     @Override
     public String toString() {
         return "PessoaFisica{" +
+                super.toString() + " " +
                 "cpf='" + cpf + '\'' +
                 ", rg='" + rg + '\'' +
                 ", sexo=" + sexo +
                 ", idade=" + idade +
                 '}';
+    }
+
+    public void imprime() {
+        super.imprime();
+        System.out.print(
+                "\ncpf = " + cpf +
+                "\nrg = "  + rg +
+                "\nsexo = " + sexo.getDescricao() +
+                "\nidade = " + idade
+        );
     }
 }
