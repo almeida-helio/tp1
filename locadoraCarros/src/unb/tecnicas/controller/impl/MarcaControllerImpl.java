@@ -8,8 +8,11 @@ import java.util.List;
 
 public class MarcaControllerImpl implements MarcaController {
     
-    private static final MarcaRepository marcaRepository = new MarcaRepository();
+    private static MarcaRepository marcaRepository;
 
+    public MarcaControllerImpl(List<Marca> marcaList) {
+        this.marcaRepository = new MarcaRepository(marcaList);
+    }
 
     @Override
     public void create(Marca marca) {

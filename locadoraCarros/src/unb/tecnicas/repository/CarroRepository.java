@@ -10,7 +10,11 @@ import java.util.stream.Collectors;
 
 public class CarroRepository {
 
-    private List<Carro> carroList = DatabaseSimulator.carroList;
+    private List<Carro> carroList;
+
+    public CarroRepository(List<Carro> carroList) {
+        this.carroList = carroList;
+    }
 
     public void create(Carro carro) {
         if (carro.getId() != 0 || carro.getId() < 0) {

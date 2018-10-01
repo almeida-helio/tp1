@@ -16,7 +16,7 @@ public final class ClienteCarga {
     private static final String[] nomeFemininos = {"Monica", "Magali", "Maria Cascuda", "Aninha", "Carminha Frufru"
             , "Tina", "Dorinha", "Marina", "Denise", "Rosinha"};
 
-    private static final String[] caracteristicas = {"Baixinha", "Dentuca", "Cabelo Espetado", "Nao Toma Banho",
+    private static final String[] caracteristicas = {"Baixinha", " ", "Cabelo Espetado", "Nao Toma Banho",
             "Ninguem entende", "Da Roca", "Viciado em Tv", "Cientista", "Dentuco", "Nativo Brasileiro"};
 
 

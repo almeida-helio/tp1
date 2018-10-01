@@ -10,10 +10,10 @@ import java.util.List;
 
 public class ClienteControllerImpl implements ClienteController {
 
-    private ClienteRepository clienteRepository = new ClienteRepository();
+    private ClienteRepository clienteRepository;
 
-    public ClienteControllerImpl() {
-
+    public ClienteControllerImpl(List<Cliente> clienteList) {
+        clienteRepository = new ClienteRepository(clienteList);
     }
 
     @Override

@@ -8,7 +8,11 @@ import java.util.stream.Collectors;
 
 public class LocadoraRepository {
 
-    private List<Locadora> locadoraList = DatabaseSimulator.locadoraList;
+    private List<Locadora> locadoraList;
+
+    public LocadoraRepository(List<Locadora> locadoraList) {
+        this.locadoraList = locadoraList;
+    }
 
     public void create(Locadora locadora) {
         if (locadora.getId() != 0 || locadora.getId() < 0) {

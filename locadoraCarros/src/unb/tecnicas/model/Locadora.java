@@ -10,6 +10,8 @@ public class Locadora extends  PessoaJuridica{
 
     private List<Transacao> transacaoList;
 
+    private List<Marca> marcaList;
+
     public List<Carro> getCarroList() {
         return carroList;
     }
@@ -34,31 +36,13 @@ public class Locadora extends  PessoaJuridica{
         this.transacaoList = transacaoList;
     }
 
-    public void addCliente(Cliente cliente){
-        if (cliente.getId() != 0) {
-            return;
-        }
-        cliente.setId(this.clienteList.size() + 1);
-        this.clienteList.add(cliente);
+    public List<Marca> getMarcaList() {
+        return marcaList;
     }
 
-    public void addCarro(Carro carro){
-        if (carro.getId() != 0) {
-            return;
-        }
-        carro.setId(this.carroList.size() + 1);
-        this.carroList.add(carro);
+    public void setMarcaList(List<Marca> marcaList) {
+        this.marcaList = marcaList;
     }
-
-    public void addTransacao(Transacao transacao) throws Exception{
-        if (transacao.getId() != 0) {
-            return;
-        }
-        transacao.setId(this.transacaoList.size() + 1);
-        this.transacaoList.add(transacao);
-    }
-
-
 
     @Override
     public String toString() {
@@ -66,6 +50,7 @@ public class Locadora extends  PessoaJuridica{
                 "carroList=" + carroList +
                 ", clienteList=" + clienteList +
                 ", transacaoList=" + transacaoList +
+                ", marcaList=" + marcaList +
                 '}';
     }
 

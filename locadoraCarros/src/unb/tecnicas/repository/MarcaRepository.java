@@ -8,7 +8,11 @@ import java.util.stream.Collectors;
 
 public class MarcaRepository {
 
-    private List<Marca> marcaList = DatabaseSimulator.marcaList;
+    private List<Marca> marcaList;
+
+    public MarcaRepository(List<Marca> marcaList) {
+        this.marcaList = marcaList;
+    }
 
     public void create(Marca marca) {
         if (marca.getId() != 0 || marca.getId() < 0) {
