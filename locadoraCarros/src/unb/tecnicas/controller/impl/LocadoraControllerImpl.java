@@ -9,8 +9,11 @@ import java.util.List;
 public class LocadoraControllerImpl implements LocadoraController {
 
 
-    private static final LocadoraRepository locadoraRepository = new LocadoraRepository();
+    private static LocadoraRepository locadoraRepository;
 
+    public LocadoraControllerImpl(List<Locadora> locadoraList) {
+        this.locadoraRepository = new LocadoraRepository(locadoraList);
+    }
 
     @Override
     public void create(Locadora locadora) {

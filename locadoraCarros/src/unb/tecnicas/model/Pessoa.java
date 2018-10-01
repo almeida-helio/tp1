@@ -14,8 +14,6 @@ public abstract class Pessoa implements Cloneable{
 
     private String telefone;
 
-    private DominioTipoPessoa tipoPessoa;
-
     public int getId() {
         return id;
     }
@@ -56,14 +54,6 @@ public abstract class Pessoa implements Cloneable{
         this.telefone = telefone;
     }
 
-    public DominioTipoPessoa getTipoPessoa() {
-        return tipoPessoa;
-    }
-
-    public void setTipoPessoa(DominioTipoPessoa tipoPessoa) {
-        this.tipoPessoa = tipoPessoa;
-    }
-
     @Override
     public String toString() {
         return "Pessoa{" +
@@ -72,7 +62,6 @@ public abstract class Pessoa implements Cloneable{
                 ", endereco='" + endereco + '\'' +
                 ", email='" + email + '\'' +
                 ", telefone='" + telefone + '\'' +
-                ", tipoPessoa=" + tipoPessoa +
                 '}';
     }
 
@@ -83,7 +72,6 @@ public abstract class Pessoa implements Cloneable{
                 "\nendereco = " + endereco +
                 "\nemail = " + email +
                 "\ntelefone = " + telefone +
-                "\ntipoPesso = " + tipoPessoa.getDescricao()
         );
     }
 

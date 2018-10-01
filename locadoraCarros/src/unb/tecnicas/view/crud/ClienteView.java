@@ -47,6 +47,7 @@ public class ClienteView extends CrudView{
             c.imprime();
         });
     }
+
     @Override
     public void doQuestions(Object object) {
         Cliente cliente = (Cliente)object;

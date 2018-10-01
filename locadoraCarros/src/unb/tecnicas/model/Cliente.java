@@ -6,8 +6,6 @@ public class Cliente extends PessoaFisica implements Cloneable{
 
     private List<Carro> carroList;
 
-
-
     public List<Carro> getCarroList() {
         return carroList;
     }

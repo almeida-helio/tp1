@@ -4,12 +4,18 @@ import unb.tecnicas.controller.CarroController;
 import unb.tecnicas.model.Carro;
 import unb.tecnicas.model.enumeration.DominioStatusLocacao;
 import unb.tecnicas.repository.CarroRepository;
+import unb.tecnicas.repository.DatabaseSimulator;
 
 import java.util.List;
 
 public class CarroControllerImpl implements CarroController {
 
-    private CarroRepository carroRepository = new CarroRepository();
+    private CarroRepository carroRepository;
+
+
+    public CarroControllerImpl(List<Carro> carroList) {
+        this.carroRepository = new CarroRepository(carroList);
+    }
 
     @Override
     public void create(Carro carro) {

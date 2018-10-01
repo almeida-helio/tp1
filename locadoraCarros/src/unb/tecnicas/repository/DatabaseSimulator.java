@@ -1,6 +1,8 @@
 package unb.tecnicas.repository;
 
+import unb.tecnicas.carga.CarroCarga;
 import unb.tecnicas.carga.ClienteCarga;
+import unb.tecnicas.carga.MarcaCarga;
 import unb.tecnicas.model.Carro;
 import unb.tecnicas.model.Cliente;
 import unb.tecnicas.model.Locadora;
@@ -10,29 +12,23 @@ import unb.tecnicas.model.Transacao;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DatabaseSimulator {
+public abstract class DatabaseSimulator {
 
+    protected List<Marca> marcaList = MarcaCarga.gerarMarcas();
 
-    protected static List<Carro> carroList = new ArrayList<>();
+    protected List<Carro> carroList = CarroCarga.gerarCarros(marcaList);
 
-    protected static List<Marca> marcaList = new ArrayList<>();
+    protected List<Transacao> transacaoList = new ArrayList<>();
 
-    protected static List<Transacao> transacaoList = new ArrayList<>();
+    protected List<Cliente> clienteList = ClienteCarga.gerarClientes();
 
-    protected static List<Cliente> clienteList = new ArrayList<>();
+    protected List<Locadora> locadoraList;
 
-    protected static Locadora locadora;
-
-    public DatabaseSimulator(Locadora locadora1, String opc) {
-        locadora = locadora1;
-        if (opc.equalsIgnoreCase("n")) {
-            locadora.setCarroList(new ArrayList<>());
-            locadora.setClienteList(new ArrayList<>());
-            locadora.setTransacaoList(new ArrayList<>());
-        } else {
-            locadora.setClienteList(ClienteCarga.gerarClientes());
-        }
-
+    public void gerarCarga() {
+        locadoraList.get(0).setCarroList(carroList);
+        locadoraList.get(0).setClienteList(clienteList);
+        locadoraList.get(0).setTransacaoList(transacaoList);
+        locadoraList.get(0).setMarcaList(marcaList);
     }
 
     public List<Cliente> getClienteList() {
@@ -47,7 +43,7 @@ public class DatabaseSimulator {
         return transacaoList;
     }
 
-    public Locadora getLocadora() {
-        return locadora;
+    public List<Locadora> getLocadoraList() {
+        return locadoraList;
     }
 }
