@@ -15,22 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LocadoraView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/crud/LocadoraView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="26" column="60" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#122#123#0" expanded="true" />
-                <element signature="e#155#156#0" expanded="true" />
-                <element signature="e#587#588#0" expanded="true" />
-                <element signature="e#612#613#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LocadoraRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/repository/LocadoraRepository.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -43,10 +27,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseSimulator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DatabaseSimulator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/repository/DatabaseSimulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
+            <state relative-caret-position="459">
               <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -55,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MarcaView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/crud/MarcaView.java">
+      <file leaf-file-name="ClienteCarga.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/carga/ClienteCarga.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="10" selection-start-line="10" selection-end-line="11" />
+            <state relative-caret-position="484">
+              <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,20 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Locadora.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/model/Locadora.java">
+      <file leaf-file-name="ClienteControllerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/controller/impl/ClienteControllerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1298">
-              <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PessoaFisicaView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/crud/PessoaFisicaView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="-396">
+              <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,23 +63,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PessoaJuridicaView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/crud/PessoaJuridicaView.java">
+      <file leaf-file-name="Carro.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/model/Carro.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1298">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuInicial.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/menu/MenuInicial.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransacaoMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/menu/TransacaoMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarroView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/crud/CarroView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="61" column="30" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ManterMenu.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/menu/ManterMenu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
               <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PessoaJuridica.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/model/PessoaJuridica.java">
+      <file leaf-file-name="CrudView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/crud/CrudView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+            <state relative-caret-position="1386">
+              <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="75" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,10 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/unb/tecnicas/model/Multa.java" />
-        <option value="$PROJECT_DIR$/src/unb/tecnicas/model/Emprestimo.java" />
-        <option value="$PROJECT_DIR$/src/unb/tecnicas/controller/CarroService.java" />
-        <option value="$PROJECT_DIR$/src/unb/tecnicas/controller/UtilitarioController.java" />
         <option value="$PROJECT_DIR$/src/unb/tecnicas/controller/MultaController.java" />
         <option value="$PROJECT_DIR$/src/unb/tecnicas/controller/TransacaoController.java" />
         <option value="$PROJECT_DIR$/src/unb/tecnicas/controller/Exceptions/RegistroDuplicadoException.java" />
@@ -198,6 +214,10 @@
         <option value="$PROJECT_DIR$/src/unb/tecnicas/repository/LocadoraRepository.java" />
         <option value="$PROJECT_DIR$/src/unb/tecnicas/view/crud/LocadoraView.java" />
         <option value="$PROJECT_DIR$/src/unb/tecnicas/repository/DatabaseSimulator.java" />
+        <option value="$PROJECT_DIR$/src/unb/tecnicas/view/menu/menuInicial.java" />
+        <option value="$PROJECT_DIR$/src/unb/tecnicas/view/menu/MenuInicial.java" />
+        <option value="$PROJECT_DIR$/src/unb/tecnicas/view/menu/TransacaoMenu.java" />
+        <option value="$PROJECT_DIR$/src/unb/tecnicas/view/menu/ManterMenu.java" />
       </list>
     </option>
   </component>
@@ -245,7 +265,23 @@
               <item name="locadoraCarros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="tecnicas" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="locadoraCarros" type="b2602c69:ProjectViewProjectNode" />
+              <item name="locadoraCarros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tecnicas" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="crud" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="locadoraCarros" type="b2602c69:ProjectViewProjectNode" />
+              <item name="locadoraCarros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tecnicas" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="menu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -270,6 +306,7 @@
       <recent name="unb.tecnicas.domain.enumeration" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="unb.tecnicas.view.menu" />
       <recent name="unb.tecnicas.repository" />
     </key>
   </component>
@@ -354,12 +391,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538253281892</updated>
-      <workItem from="1538253283542" duration="46546000" />
+      <workItem from="1538253283542" duration="47741000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46546000" />
+    <option name="totallyTimeSpent" value="47741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1054" extended-state="6" />
@@ -376,7 +413,7 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.5318231" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32901832" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32901832" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2497332" />
@@ -456,31 +493,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/model/enumeration/DominioSexo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="9" lean-forward="true" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <element signature="e#222#223#0" expanded="true" />
-            <element signature="e#259#260#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/model/enumeration/DominioTipoTransacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/model/enumeration/DominioStatusTransacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/model/enumeration/DominioStatusLocacao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -709,30 +721,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/controller/impl/ClienteControllerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/repository/CarroRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="921">
           <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/model/Carro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -824,16 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/crud/CrudView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/model/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
@@ -845,30 +827,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/carga/ClienteCarga.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/controller/impl/LocadoraControllerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/crud/CarroView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="857">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -965,11 +927,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/repository/DatabaseSimulator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
+        <state relative-caret-position="459">
           <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/carga/ClienteCarga.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/controller/impl/ClienteControllerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-396">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/model/Carro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1298">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/crud/CrudView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="75" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/menu/MenuInicial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/crud/CarroView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="61" column="30" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/menu/TransacaoMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unb/tecnicas/view/menu/ManterMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
