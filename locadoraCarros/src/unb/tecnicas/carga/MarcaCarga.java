@@ -1,7 +1,5 @@
 package unb.tecnicas.carga;
 
-import unb.tecnicas.model.Marca;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;

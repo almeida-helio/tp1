@@ -71,7 +71,7 @@ public abstract class Pessoa implements Cloneable{
                 "\nnome = "  + nome +
                 "\nendereco = " + endereco +
                 "\nemail = " + email +
-                "\ntelefone = " + telefone +
+                "\ntelefone = " + telefone
         );
     }
 

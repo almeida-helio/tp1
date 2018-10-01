@@ -1,7 +1,6 @@
 package unb.tecnicas.view.crud;
 
 import unb.tecnicas.controller.impl.CarroControllerImpl;
-import unb.tecnicas.controller.impl.MarcaControllerImpl;
 import unb.tecnicas.model.Carro;
 import unb.tecnicas.model.enumeration.DominioStatusLocacao;
 

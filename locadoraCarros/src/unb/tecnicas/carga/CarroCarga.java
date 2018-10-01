@@ -1,7 +1,6 @@
 package unb.tecnicas.carga;
 
 import unb.tecnicas.model.Carro;
-import unb.tecnicas.model.Marca;
 import unb.tecnicas.model.enumeration.DominioStatusLocacao;
 
 import java.time.Year;

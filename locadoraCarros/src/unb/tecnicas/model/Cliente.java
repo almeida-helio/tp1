@@ -1,35 +1,35 @@
 package unb.tecnicas.model;
 
-import java.util.List;
+import unb.tecnicas.model.enumeration.DominioStatus;
 
-public class Cliente extends PessoaFisica implements Cloneable{
+public class Cliente extends PessoaFisica implements Cloneable {
 
-    private List<Carro> carroList;
 
-    public List<Carro> getCarroList() {
-        return carroList;
+    private DominioStatus dominioStatus;
+
+    public DominioStatus getDominioStatus() {
+        return dominioStatus;
     }
 
-    public void setCarroList(List<Carro> carroList) {
-        this.carroList = carroList;
+    public void setDominioStatus(DominioStatus dominioStatus) {
+        this.dominioStatus = dominioStatus;
     }
 
     @Override
     public String toString() {
         return "Cliente{" +
-                super.toString() + " " +
-                ", carroList=" + carroList +
+                "dominioStatus=" + dominioStatus +
                 '}';
     }
 
     public Cliente clone() {
-        return (Cliente)super.clone();
+        return (Cliente) super.clone();
     }
 
     public void imprime() {
         super.imprime();
         System.out.print(
-                "\ncarroList = " +carroList
+                "\nstatus = " + dominioStatus.getDescricao()
         );
     }
 }

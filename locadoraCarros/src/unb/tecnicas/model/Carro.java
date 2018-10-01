@@ -12,7 +12,7 @@ public class Carro implements Cloneable {
 
     private Year ano;
 
-    private Marca marca;
+    private String marca;
 
     private int numeroPortas;
 
@@ -51,11 +51,11 @@ public class Carro implements Cloneable {
         this.ano = ano;
     }
 
-    public Marca getMarca() {
+    public String getMarca() {
         return marca;
     }
 
-    public void setMarca(Marca marca) {
+    public void setMarca(String marca) {
         this.marca = marca;
     }
 
@@ -139,17 +139,13 @@ public class Carro implements Cloneable {
     public void imprime() {
         System.out.print(
                 "\nid: " + id +
-                "\nmodelo" + modelo +
-                "\nano" + ano.toString() +
-                "\nmarca { \t"
-        );
-        marca.imprime();
-        System.out.print(
-                "}\n" +
+                "\nmodelo: " + modelo +
+                "\nano: " + ano.toString() +
+                "\nmarca: "+ marca +
                 "\nnumeroPortas: " + numeroPortas +
                 "\nnumeroBancos: " + numeroBancos +
                 "\nrenavam: " + renavam +
-                "\nquilometrosRodados " + quilometrosRodados +
+                "\nquilometrosRodados: " + quilometrosRodados +
                 "\nplaca: " + placa +
                 "\nstatusLocacao: " + statusLocacao.getDescricao()
         );

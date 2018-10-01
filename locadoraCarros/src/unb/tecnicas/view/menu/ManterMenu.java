@@ -1,10 +1,8 @@
 package unb.tecnicas.view.menu;
 
-import unb.tecnicas.model.Cliente;
 import unb.tecnicas.view.crud.CarroView;
 import unb.tecnicas.view.crud.ClienteView;
 import unb.tecnicas.view.crud.LocadoraView;
-import unb.tecnicas.view.crud.MarcaView;
 
 public class ManterMenu extends Menu{
 

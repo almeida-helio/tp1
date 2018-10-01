@@ -1,10 +1,6 @@
 package unb.tecnicas.model;
 
-import unb.tecnicas.model.enumeration.DominioStatusTransacao;
-import unb.tecnicas.repository.DatabaseSimulator;
-
 import java.time.LocalDateTime;
-import java.util.List;
 
 public class Transacao {
 
