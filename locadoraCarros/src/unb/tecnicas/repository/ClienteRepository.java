@@ -1,4 +1,4 @@
-package unb.tecnicas.Repository;
+package unb.tecnicas.repository;
 
 import unb.tecnicas.model.Cliente;
 
@@ -8,12 +8,7 @@ import java.util.stream.Collectors;
 
 public class ClienteRepository {
 
-    private List<Cliente> clienteList;
-
-
-    public ClienteRepository(List<Cliente> clienteList) {
-        this.clienteList = clienteList;
-    }
+    private List<Cliente> clienteList = DatabaseSimulator.clienteList;
 
     public void create(Cliente cliente) {
         if (cliente.getId() != 0 || cliente.getId() < 0) {

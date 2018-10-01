@@ -1,6 +1,6 @@
 package unb.tecnicas.model;
 
-public class Marca {
+public class Marca implements Cloneable {
 
     private int id;
 
@@ -22,11 +22,28 @@ public class Marca {
         this.nome = nome;
     }
 
+    public Marca clone() {
+        try {
+            return (Marca)super.clone();
+        }
+        catch (CloneNotSupportedException e) {
+            System.out.println("CloneNotSupportedException in class marca : "+e.getMessage());
+            return null;
+        }
+    }
+
     @Override
     public String toString() {
         return "Marca{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 '}';
+    }
+
+    public void imprime() {
+        System.out.println(
+                "\nid :" + id +
+                "\nnome: " + nome
+        );
     }
 }

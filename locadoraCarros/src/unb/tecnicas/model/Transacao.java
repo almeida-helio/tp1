@@ -1,7 +1,7 @@
 package unb.tecnicas.model;
 
 import unb.tecnicas.model.enumeration.DominioStatusTransacao;
-import unb.tecnicas.model.enumeration.DominioTipoTransacao;
+import unb.tecnicas.repository.DatabaseSimulator;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -10,19 +10,21 @@ public class Transacao {
 
     private int id;
 
-    private LocalDateTime dataInicio;
+    private LocalDateTime dataLocacao;
+
+    private LocalDateTime dataDevolucao;
 
     private LocalDateTime dataFim;
 
-    private double valor;
-
-    private double desconto;
-
-    private List<Multa> multaList;
-
     private Cliente locador;
 
-    private Carro carro;
+    private Carro alugado;
+
+    private double valor;
+
+    private double descontoPercentual;
+
+    private double multaPercentual;
 
     private DominioStatusTransacao dominioStatusTransacao;
 
@@ -34,12 +36,20 @@ public class Transacao {
         this.id = id;
     }
 
-    public LocalDateTime getDataInicio() {
-        return dataInicio;
+    public LocalDateTime getDataLocacao() {
+        return dataLocacao;
     }
 
-    public void setDataInicio(LocalDateTime dataInicio) {
-        this.dataInicio = dataInicio;
+    public void setDataLocacao(LocalDateTime dataLocacao) {
+        this.dataLocacao = dataLocacao;
+    }
+
+    public LocalDateTime getDataDevolucao() {
+        return dataDevolucao;
+    }
+
+    public void setDataDevolucao(LocalDateTime dataDevolucao) {
+        this.dataDevolucao = dataDevolucao;
     }
 
     public LocalDateTime getDataFim() {
@@ -50,30 +60,6 @@ public class Transacao {
         this.dataFim = dataFim;
     }
 
-    public double getValor() {
-        return valor;
-    }
-
-    public void setValor(double valor) {
-        this.valor = valor;
-    }
-
-    public double getDesconto() {
-        return desconto;
-    }
-
-    public void setDesconto(double desconto) {
-        this.desconto = desconto;
-    }
-
-    public List<Multa> getMultaList() {
-        return multaList;
-    }
-
-    public void setMultaList(List<Multa> multaList) {
-        this.multaList = multaList;
-    }
-
     public Cliente getLocador() {
         return locador;
     }
@@ -82,12 +68,36 @@ public class Transacao {
         this.locador = locador;
     }
 
-    public Carro getCarro() {
-        return carro;
+    public Carro getAlugado() {
+        return alugado;
     }
 
-    public void setCarro(Carro carro) {
-        this.carro = carro;
+    public void setAlugado(Carro alugado) {
+        this.alugado = alugado;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public double getDescontoPercentual() {
+        return descontoPercentual;
+    }
+
+    public void setDescontoPercentual(double descontoPercentual) {
+        this.descontoPercentual = descontoPercentual;
+    }
+
+    public double getMultaPercentual() {
+        return multaPercentual;
+    }
+
+    public void setMultaPercentual(double multaPercentual) {
+        this.multaPercentual = multaPercentual;
     }
 
     public DominioStatusTransacao getDominioStatusTransacao() {
@@ -96,20 +106,5 @@ public class Transacao {
 
     public void setDominioStatusTransacao(DominioStatusTransacao dominioStatusTransacao) {
         this.dominioStatusTransacao = dominioStatusTransacao;
-    }
-
-    @Override
-    public String toString() {
-        return "Transacao{" +
-                "id=" + id +
-                ", dataInicio=" + dataInicio +
-                ", dataFim=" + dataFim +
-                ", valor=" + valor +
-                ", desconto=" + desconto +
-                ", multaList=" + multaList +
-                ", locador=" + locador +
-                ", carro=" + carro +
-                ", dominioStatusTransacao=" + dominioStatusTransacao +
-                '}';
     }
 }

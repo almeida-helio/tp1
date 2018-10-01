@@ -3,9 +3,8 @@ package unb.tecnicas.model;
 import unb.tecnicas.model.enumeration.DominioStatusLocacao;
 
 import java.time.Year;
-import java.util.List;
 
-public class Carro {
+public class Carro implements Cloneable {
 
     private int id;
 
@@ -19,17 +18,14 @@ public class Carro {
 
     private int numeroBancos;
 
-    private String renavam;
-
     private double quilometrosRodados;
 
     private String placa;
 
+    private String renavam;
+
     private DominioStatusLocacao statusLocacao;
 
-    private double valorLocacao;
-
-    private List<Multa> multa;
 
     public int getId() {
         return id;
@@ -111,21 +107,7 @@ public class Carro {
         this.statusLocacao = statusLocacao;
     }
 
-    public double getValorLocacao() {
-        return valorLocacao;
-    }
 
-    public void setValorLocacao(double valorLocacao) {
-        this.valorLocacao = valorLocacao;
-    }
-
-    public List<Multa> getMulta() {
-        return multa;
-    }
-
-    public void setMulta(List<Multa> multa) {
-        this.multa = multa;
-    }
 
     @Override
     public String toString() {
@@ -140,8 +122,38 @@ public class Carro {
                 ", quilometrosRodados=" + quilometrosRodados +
                 ", placa='" + placa + '\'' +
                 ", statusLocacao=" + statusLocacao +
-                ", valorLocacao=" + valorLocacao +
-                ", multa=" + multa +
                 '}';
     }
+
+    @Override
+    public Carro clone() {
+        try {
+            return (Carro)super.clone();
+        }
+        catch (CloneNotSupportedException e) {
+            System.out.println("CloneNotSupportedException in class carro : "+e.getMessage());
+            return null;
+        }
+    }
+
+    public void imprime() {
+        System.out.print(
+                "\nid: " + id +
+                "\nmodelo" + modelo +
+                "\nano" + ano.toString() +
+                "\nmarca { \t"
+        );
+        marca.imprime();
+        System.out.print(
+                "}\n" +
+                "\nnumeroPortas: " + numeroPortas +
+                "\nnumeroBancos: " + numeroBancos +
+                "\nrenavam: " + renavam +
+                "\nquilometrosRodados " + quilometrosRodados +
+                "\nplaca: " + placa +
+                "\nstatusLocacao: " + statusLocacao.getDescricao()
+        );
+    }
+
+
 }

@@ -2,13 +2,11 @@ package unb.tecnicas.model;
 
 import java.util.List;
 
-public class PessoaJuridica {
+public abstract class PessoaJuridica  extends Pessoa{
 
     private String razaoSocial;
 
     private String cnpj;
-
-    private List<PessoaFisica> responsaveis;
 
     public String getRazaoSocial() {
         return razaoSocial;
@@ -26,20 +24,16 @@ public class PessoaJuridica {
         this.cnpj = cnpj;
     }
 
-    public List<PessoaFisica> getResponsaveis() {
-        return responsaveis;
-    }
-
-    public void setResponsaveis(List<PessoaFisica> responsaveis) {
-        this.responsaveis = responsaveis;
-    }
 
     @Override
     public String toString() {
         return "PessoaJuridica{" +
                 "razaoSocial='" + razaoSocial + '\'' +
                 ", cnpj='" + cnpj + '\'' +
-                ", responsaveis=" + responsaveis +
                 '}';
+    }
+
+    public PessoaJuridica clone() {
+        return (PessoaJuridica) super.clone();
     }
 }

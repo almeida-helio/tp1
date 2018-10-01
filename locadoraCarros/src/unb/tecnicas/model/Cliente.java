@@ -25,13 +25,7 @@ public class Cliente extends PessoaFisica implements Cloneable{
     }
 
     public Cliente clone() {
-        try {
-            return (Cliente)super.clone();
-        }
-        catch (CloneNotSupportedException e) {
-            System.out.println("CloneNotSupportedException in class cliente : "+e.getMessage());
-            return null;
-        }
+        return (Cliente)super.clone();
     }
 
     public void imprime() {

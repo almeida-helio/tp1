@@ -1,7 +1,7 @@
 package unb.tecnicas;
 
-import unb.tecnicas.Repository.ClienteRepository;
-import unb.tecnicas.Repository.DatabaseSimulator;
+import unb.tecnicas.repository.ClienteRepository;
+import unb.tecnicas.repository.DatabaseSimulator;
 
 public class Main {
 

@@ -68,4 +68,8 @@ public class Locadora extends  PessoaJuridica{
                 ", transacaoList=" + transacaoList +
                 '}';
     }
+
+    public Locadora clone() {
+        return (Locadora) super.clone();
+    }
 }

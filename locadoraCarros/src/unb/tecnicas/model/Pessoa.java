@@ -2,7 +2,7 @@ package unb.tecnicas.model;
 
 import unb.tecnicas.model.enumeration.DominioTipoPessoa;
 
-public class Pessoa {
+public abstract class Pessoa implements Cloneable{
 
     private int id;
 
@@ -85,5 +85,15 @@ public class Pessoa {
                 "\ntelefone = " + telefone +
                 "\ntipoPesso = " + tipoPessoa.getDescricao()
         );
+    }
+
+    public Pessoa clone() {
+        try {
+            return (Pessoa)super.clone();
+        }
+        catch (CloneNotSupportedException e) {
+            System.out.println("CloneNotSupportedException in class pessoa : "+e.getMessage());
+            return null;
+        }
     }
 }

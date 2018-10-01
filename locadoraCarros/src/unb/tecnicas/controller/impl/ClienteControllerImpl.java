@@ -1,6 +1,6 @@
 package unb.tecnicas.controller.impl;
 
-import unb.tecnicas.Repository.ClienteRepository;
+import unb.tecnicas.repository.ClienteRepository;
 import unb.tecnicas.controller.ClienteController;
 import unb.tecnicas.model.Carro;
 import unb.tecnicas.model.Cliente;
@@ -10,11 +10,10 @@ import java.util.List;
 
 public class ClienteControllerImpl implements ClienteController {
 
-    private ClienteRepository clienteRepository;
+    private ClienteRepository clienteRepository = new ClienteRepository();
 
+    public ClienteControllerImpl() {
 
-    public ClienteControllerImpl(ClienteRepository clienteRepository) {
-        this.clienteRepository = clienteRepository;
     }
 
     @Override
@@ -41,16 +40,6 @@ public class ClienteControllerImpl implements ClienteController {
     }
 
     @Override
-    public Transacao alugar(Carro carro) {
-        return null;
-    }
-
-    @Override
-    public void devolver(Transacao transacao) {
-
-    }
-
-    @Override
     public Cliente findOne(int id) {
         if (id < 0) {
             System.out.println( "Erro ao procurar, " + id +" invalido");
@@ -64,4 +53,14 @@ public class ClienteControllerImpl implements ClienteController {
         return this.clienteRepository.findAll();
     }
 
+
+    @Override
+    public Transacao alugar(Carro carro) {
+        return null;
+    }
+
+    @Override
+    public void devolver(Transacao transacao) {
+
+    }
 }

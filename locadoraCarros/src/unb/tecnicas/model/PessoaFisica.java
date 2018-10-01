@@ -2,7 +2,7 @@ package unb.tecnicas.model;
 
 import unb.tecnicas.model.enumeration.DominioSexo;
 
-public class PessoaFisica extends Pessoa{
+public abstract class PessoaFisica extends Pessoa implements Cloneable{
 
     private String cpf;
 
@@ -63,5 +63,9 @@ public class PessoaFisica extends Pessoa{
                 "\nsexo = " + sexo.getDescricao() +
                 "\nidade = " + idade
         );
+    }
+
+    public PessoaFisica clone() {
+        return (PessoaFisica) super.clone();
     }
 }
