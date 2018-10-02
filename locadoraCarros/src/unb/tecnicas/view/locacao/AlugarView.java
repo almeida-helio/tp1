@@ -9,12 +9,15 @@ import unb.tecnicas.model.Agencia;
 import unb.tecnicas.model.Carro;
 import unb.tecnicas.model.Cliente;
 import unb.tecnicas.model.Operacao;
+import unb.tecnicas.model.enumeration.DominioTipoLocacao;
 import unb.tecnicas.repository.DatabaseSimulator;
 import unb.tecnicas.util.ProcessaDados;
 import unb.tecnicas.view.printters.ListarResumo;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class AlugarView {
 
@@ -66,7 +69,7 @@ public class AlugarView {
 
 
     private void selecionarAgencia(Operacao operacao) {
-        List<Agencia> agenciaList = agenciaController.findAll();
+        List<Agencia> agenciaList = obterListaAgencias();
         List<Integer> integers = Arrays.asList(agenciaList.stream().map(c -> c.getId()).toArray(Integer[]::new));
         ListarResumo.listarAgencia(agenciaList);
         String msg = "Informe o id da agencia na qual o carro sera alugado: ";
@@ -75,13 +78,29 @@ public class AlugarView {
 
     }
 
-    private void obterDadosOperacao(Operacao operacao) {
+    private List<Agencia> obterListaAgencias() {
+        List<Carro> carroList = carroController.findAll();
+        List<Integer> agenciasComCarros =
+                Arrays.asList(carroList.stream().map(c -> c.getAgencia().getId()).toArray(Integer[]::new));
+        return agenciaController.findAll().stream().filter( f ->
+            agenciasComCarros.contains(f.getId())
+        ).collect(Collectors.toList());
+    }
 
+    private void obterDadosOperacao(Operacao operacao) {
+        Scanner s = new Scanner(System.in);
         operacao.setDataLocacao(ProcessaDados.getValidDate(
                 "Insira a data de emprestimo(DD/MM/YYYY HH:MM): "));
         operacao.setDataDevolucaoPrevista(ProcessaDados.getValidDate(
                 "Insira a data prevista de devolucao(DD/MM/YYYY HH:MM): "));
-        operacaoController.calculaPreco(operacao, carroController.findOne(operacao.getIdCarro()).getValorDiaria());
+        System.out.print("\nO valor da locação será cobrado por dia de uso(S/N)?");
+        if(s.nextLine().equalsIgnoreCase("n")) {
+            operacao.setDominioTipoLocacao(DominioTipoLocacao.P);
+            System.out.print("\nInsira a porcentagem do desconto(Ex.: 20.5):");
+            operacao.setDesconto(s.nextDouble() / 100);
+        } else {
+            operacao.setDominioTipoLocacao(DominioTipoLocacao.D);
+        }
     }
 
     private void salvar (Operacao operacao) {

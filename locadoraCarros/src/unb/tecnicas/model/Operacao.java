@@ -151,7 +151,7 @@ public class Operacao implements Cloneable{
                 dataDevolucao.toLocalDate().toString() + " " + dataDevolucao.toLocalTime().toString());
 
         String prevista = dataDevolucaoPrevista == null ? " " :
-                (dataDevolucaoPrevista.toLocalTime().toString() + " " + dataDevolucaoPrevista.toLocalTime().toString());
+                (dataDevolucaoPrevista.toLocalDate().toString() + " " + dataDevolucaoPrevista.toLocalTime().toString());
 
         System.out.print(
                 "\nid : " + id+
@@ -172,5 +172,6 @@ public class Operacao implements Cloneable{
                 "\nidCliente: " + idCliente
         );
     }
+
 
 }

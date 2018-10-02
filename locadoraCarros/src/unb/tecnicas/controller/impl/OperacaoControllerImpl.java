@@ -59,11 +59,6 @@ public class OperacaoControllerImpl implements OperacaoController {
         return operacaoRepository.findAll();
     }
 
-    @Override
-    public void calculaPreco(Operacao operacao, double valorDiaria) {
-        Long days = Duration.between(operacao.getDataLocacao(), operacao.getDataDevolucaoPrevista()).toDays();
-        operacao.setValor(valorDiaria*days);
-    }
 
     @Override
     public void alugar(Operacao operacao) {
@@ -78,12 +73,21 @@ public class OperacaoControllerImpl implements OperacaoController {
         Carro carro = carroController.findOne(operacao.getIdCarro());
         carro.setStatusLocacao(DominioStatusLocacao.D);
         carroController.update(carro);
+        operacao.setValor(this.calculaValorFinal(operacao));
         this.update(operacao);
     }
 
     @Override
     public List<Operacao> findAllPendente() {
         return operacaoRepository.findAllPendente();
+    }
+
+    @Override
+    public double calculaValorFinal(Operacao operacao) {
+        Carro carro = carroController.findOne(operacao.getIdCarro());
+        Long days = Duration.between(operacao.getDataLocacao(), operacao.getDataDevolucao()).toDays();
+        double valorTotal = carro.getValorDiaria()*days;
+        return valorTotal - valorTotal*operacao.getDesconto() + valorTotal*operacao.getMulta();
     }
 
 

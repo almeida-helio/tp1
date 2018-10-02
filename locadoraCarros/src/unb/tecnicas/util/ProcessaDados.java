@@ -32,7 +32,7 @@ public final class ProcessaDados {
             data = s.nextLine();
             try {
                 localDateTime = DataUtil.stringToDate(data);
-                break;
+                return localDateTime;
             } catch (DateTimeParseException e) {
                 System.out.print("\nInforme uma data valida por favor!");
 
@@ -40,7 +40,6 @@ public final class ProcessaDados {
         } while (Boolean.TRUE);
         return localDateTime;
     }
-
 
     private static Boolean validaId(List<Integer> ids, int id) {
         if (id < 0) {

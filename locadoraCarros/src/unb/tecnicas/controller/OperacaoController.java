@@ -16,11 +16,11 @@ public interface OperacaoController {
 
     List<Operacao> findAll();
 
-    void calculaPreco(Operacao operacao, double valorDiaria);
-
     void alugar(Operacao operacao);
 
     void devolver(Operacao operacao);
 
     List<Operacao> findAllPendente();
+
+    double calculaValorFinal(Operacao operacao);
 }

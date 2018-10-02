@@ -28,7 +28,7 @@ public final class AgenciaCarga {
 
     public static List<Agencia> gerarAgencias(Locadora locadora) {
         List<Agencia> agenciaList = new ArrayList<>();
-        for(int i = 0; i <= 5; i++) {
+        for(int i = 0; i <= 3; i++) {
             agenciaList.add(gerarAgencia(i, locadora));
         }
         return agenciaList;
@@ -37,8 +37,12 @@ public final class AgenciaCarga {
     public static Agencia gerarAgencia(int id, Locadora locadora) {
         Agencia agencia = new Agencia();
         Random r = new Random();
+        Random c = new Random();
         agencia.setId(id + 1);
-        agencia.setNome(nomes[r.nextInt(nomes.length - 1)]);
+        agencia.setNome(
+                nomes[r.nextInt(nomes.length - 1)] + " " +
+                nomes[c.nextInt(nomes.length - 1)]
+        );
         agencia.setEndereco("Bairro do Limoeiro " + endereco[r.nextInt(endereco.length - 1)]);
         agencia.setCnpj(cnpj[r.nextInt(cnpj.length - 1)]);
         agencia.setEmail(email[r.nextInt(email.length - 1)]);

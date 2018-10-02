@@ -66,7 +66,7 @@ public final class CarroCarga {
         carro.setNumeroPortas(getModuloFormatado(i + 1));
         carro.setQuilometrosRodados(r.nextGaussian()*100 + 1000);
         carro.setStatusLocacao(DominioStatusLocacao.D);
-        carro.setAgencia(agencias.get(i - 1));
+        carro.setAgencia(agencias.get(r.nextInt(agencias.size() - 1)));
         carro.setCor(cores[r.nextInt(cores.length - 1)]);
         carro.setValorDiaria(r.nextGaussian()*5 + 30);
         return carro;
