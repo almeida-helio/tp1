@@ -1,7 +1,6 @@
 package unb.tecnicas.repository;
 
 import unb.tecnicas.model.Carro;
-import unb.tecnicas.model.Cliente;
 import unb.tecnicas.model.enumeration.DominioStatusLocacao;
 
 import java.util.ArrayList;
@@ -66,6 +65,13 @@ public class CarroRepository {
     public List<Carro> findAllByStatusLocacao(DominioStatusLocacao dominioStatusLocacao) {
         List<Carro> carroList = this.carroList.stream().filter( f ->
                 f.getStatusLocacao().equals(dominioStatusLocacao)).collect(Collectors.toList());
+        return new ArrayList<>(carroList);
+    }
+
+    public List<Carro> findAllDisponiveisByIdAgencia(int id) {
+        List<Carro> carroList = this.carroList.stream().filter( f ->
+            f.getStatusLocacao().equals(DominioStatusLocacao.D)
+                    && f.getAgencia().getId() == id).collect(Collectors.toList());
         return new ArrayList<>(carroList);
     }
 

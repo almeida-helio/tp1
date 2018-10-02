@@ -1,6 +1,6 @@
 package unb.tecnicas.model;
 
-public class Modelo {
+public class Modelo implements  Cloneable{
 
     private int id;
 
@@ -21,4 +21,22 @@ public class Modelo {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public Modelo clone() {
+        try {
+            return (Modelo) super.clone();
+        }
+        catch (CloneNotSupportedException e) {
+            System.out.println("CloneNotSupportedException in class operacao : "+e.getMessage());
+            return null;
+        }
+    }
+
+    public void imprime() {
+        System.out.print(
+                "\nid: " + id +
+                "\nnome: " + nome
+        );
+    }
+
 }

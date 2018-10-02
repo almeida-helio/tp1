@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="locadoraCarros:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/locadoraCarros_jar</output-path>
+    <root id="root">
+      <element id="archive" name="locadoraCarros.jar">
+        <element id="module-output" name="locadoraCarros" />
+      </element>
+    </root>
+  </artifact>
+</component>

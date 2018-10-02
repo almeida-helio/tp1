@@ -2,7 +2,7 @@ package unb.tecnicas.carga;
 
 import unb.tecnicas.model.Cliente;
 import unb.tecnicas.model.enumeration.DominioSexo;
-import unb.tecnicas.model.enumeration.DominioTipoPessoa;
+import unb.tecnicas.model.enumeration.DominioStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class ClienteCarga {
     private static final String[] nomeFemininos = {"Monica", "Magali", "Maria Cascuda", "Aninha", "Carminha Frufru"
             , "Tina", "Dorinha", "Marina", "Denise", "Rosinha"};
 
-    private static final String[] caracteristicas = {"Baixinha", " ", "Cabelo Espetado", "Nao Toma Banho",
+    private static final String[] caracteristicas = {"Baixinha", "Dentuca", "Cabelo Espetado", "Nao Toma Banho",
             "Ninguem entende", "Da Roca", "Viciado em Tv", "Cientista", "Dentuco", "Nativo Brasileiro"};
 
 
@@ -32,7 +32,7 @@ public final class ClienteCarga {
 
     public static List<Cliente> gerarClientes() {
         List<Cliente> clienteList = new ArrayList<>();
-        for(int i = 0; i < 20; i++) {
+        for(int i = 0; i < 5; i++) {
             clienteList.add(gerarCliente(i));
         }
         return clienteList;
@@ -48,14 +48,14 @@ public final class ClienteCarga {
         cliente.setEmail(email[r.nextInt(email.length - 1)]);
         cliente.setTelefone(telefone[r.nextInt(telefone.length -1)]);
         cliente.setIdade(r.nextInt(10) + 10);
-        cliente.setTipoPessoa(DominioTipoPessoa.F);
+        cliente.setDominioStatus(DominioStatus.A);
         return cliente;
     }
 
     private static void gerarNomeSexo(Cliente cliente) {
         Random r = new Random();
         Random c = new Random();
-        if (cliente.getId() <= 9) {
+        if (cliente.getId() <= 2) {
             cliente.setSexo(DominioSexo.M);
             cliente.setNome(nomeMasculinos[r.nextInt(nomeMasculinos.length - 1)] +
                     " " + caracteristicas[c.nextInt(caracteristicas.length - 1)]);

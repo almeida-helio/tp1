@@ -15,21 +15,18 @@ public class Cliente extends PessoaFisica implements Cloneable {
         this.dominioStatus = dominioStatus;
     }
 
-    @Override
-    public String toString() {
-        return "Cliente{" +
-                "dominioStatus=" + dominioStatus +
-                '}';
-    }
-
     public Cliente clone() {
         return (Cliente) super.clone();
     }
 
     public void imprime() {
         super.imprime();
+    }
+
+    public void imprimeResumo() {
         System.out.print(
-                "\nstatus = " + dominioStatus.getDescricao()
+                "\nid: " + getId() +
+                "\nnome: " + getNome()
         );
     }
 }

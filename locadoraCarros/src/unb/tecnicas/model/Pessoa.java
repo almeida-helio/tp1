@@ -1,7 +1,5 @@
 package unb.tecnicas.model;
 
-import unb.tecnicas.model.enumeration.DominioTipoPessoa;
-
 public abstract class Pessoa implements Cloneable{
 
     private int id;
@@ -54,16 +52,6 @@ public abstract class Pessoa implements Cloneable{
         this.telefone = telefone;
     }
 
-    @Override
-    public String toString() {
-        return "Pessoa{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", endereco='" + endereco + '\'' +
-                ", email='" + email + '\'' +
-                ", telefone='" + telefone + '\'' +
-                '}';
-    }
 
     public void imprime() {
         System.out.print(

@@ -20,4 +20,6 @@ public interface CarroController {
 
     List<Carro> findAllByStatusLocacao(DominioStatusLocacao dominioStatusLocacao);
 
+    List<Carro> findAllDisponiveisByIdAgencia(int id);
+
 }

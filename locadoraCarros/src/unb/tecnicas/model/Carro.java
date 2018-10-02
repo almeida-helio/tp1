@@ -8,7 +8,7 @@ public class Carro implements Cloneable {
 
     private int id;
 
-    private String modelo;
+    private Modelo modelo;
 
     private Year ano;
 
@@ -26,6 +26,11 @@ public class Carro implements Cloneable {
 
     private DominioStatusLocacao statusLocacao;
 
+    private double valorDiaria;
+
+    private Agencia agencia;
+
+    private String cor;
 
     public int getId() {
         return id;
@@ -35,11 +40,11 @@ public class Carro implements Cloneable {
         this.id = id;
     }
 
-    public String getModelo() {
+    public Modelo getModelo() {
         return modelo;
     }
 
-    public void setModelo(String modelo) {
+    public void setModelo(Modelo modelo) {
         this.modelo = modelo;
     }
 
@@ -107,22 +112,28 @@ public class Carro implements Cloneable {
         this.statusLocacao = statusLocacao;
     }
 
+    public Agencia getAgencia() {
+        return agencia;
+    }
 
+    public void setAgencia(Agencia agencia) {
+        this.agencia = agencia;
+    }
 
-    @Override
-    public String toString() {
-        return "Carro{" +
-                "id=" + id +
-                ", modelo='" + modelo + '\'' +
-                ", ano=" + ano +
-                ", marca=" + marca +
-                ", numeroPortas=" + numeroPortas +
-                ", numeroBancos=" + numeroBancos +
-                ", renavam='" + renavam + '\'' +
-                ", quilometrosRodados=" + quilometrosRodados +
-                ", placa='" + placa + '\'' +
-                ", statusLocacao=" + statusLocacao +
-                '}';
+    public double getValorDiaria() {
+        return valorDiaria;
+    }
+
+    public void setValorDiaria(double valorDiaria) {
+        this.valorDiaria = valorDiaria;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
     }
 
     @Override
@@ -138,18 +149,33 @@ public class Carro implements Cloneable {
 
     public void imprime() {
         System.out.print(
-                "\nid: " + id +
-                "\nmodelo: " + modelo +
+                "\nid: " + id);
+        System.out.print("\nModelo {");
+        modelo.imprime();
+        System.out.print("}");
+        System.out.print(
                 "\nano: " + ano.toString() +
+                "\ncor: " + cor +
                 "\nmarca: "+ marca +
                 "\nnumeroPortas: " + numeroPortas +
                 "\nnumeroBancos: " + numeroBancos +
                 "\nrenavam: " + renavam +
                 "\nquilometrosRodados: " + quilometrosRodados +
                 "\nplaca: " + placa +
-                "\nstatusLocacao: " + statusLocacao.getDescricao()
+                "\nstatusLocacao: " + statusLocacao.getDescricao() +
+                "\nvalorDiaria: " + valorDiaria
         );
+        System.out.print("\nAgencia {\n");
+        agencia.imprime();
+        System.out.print("\n}");
     }
 
-
+    public void imprimeResumo() {
+        System.out.print(
+                "\nid: " + id +
+                "\nmarca: " + marca +
+                "\nmodelo: " + modelo.getNome() +
+                "\ncor: " + cor
+        );
+    }
 }

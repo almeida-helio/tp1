@@ -1,6 +1,8 @@
 package unb.tecnicas.carga;
 
+import unb.tecnicas.model.Agencia;
 import unb.tecnicas.model.Carro;
+import unb.tecnicas.model.Modelo;
 import unb.tecnicas.model.enumeration.DominioStatusLocacao;
 
 import java.time.Year;
@@ -11,7 +13,7 @@ import java.util.Random;
 public final class CarroCarga {
 
 
-    private static String[] modelos = {
+    private static String[] marcas = {
             "Limoeiros movel", "Carrocas a Vapor",
             "Dentoes Car", "Canoa a remo", "Onion movel",
             "Fedor Car", "Hamburger Car", "Ovini",
@@ -27,7 +29,7 @@ public final class CarroCarga {
 
     private static final String[] placas = {
             "JJJ 8107", "CEB 9494", "ONI 7070",
-            "RUS 7150", "RBR 1985", "DIT 1964",
+            "RUS 7150", "CTT 1985", "DIT 1964",
             "REP 1989", "IND 1822", "FMR 1808",
             "ETN 1937", "ETN 1945", "JUS 1961"
     };
@@ -37,28 +39,36 @@ public final class CarroCarga {
             "23114435803", "40355790644"
     };
 
-    public static List<Carro> gerarCarros(List<Marca> marcas) {
+    private static final String[] cores = {
+            "Preto", "Branco", "Prata", "Azul", "Vermelho",
+            "Amarelo", "Roxo", "Cinza", "Verde"
+    };
+
+    public static List<Carro> gerarCarros(List<Modelo> modelos, List<Agencia> agencias) {
         List<Carro> carroList = new ArrayList<>();
-        for(int i = 0; i < 20; i++) {
-            carroList.add(gerarCarro((i + 1), marcas));
+        for(int i = 0; i <= 5; i++) {
+            carroList.add(gerarCarro((i + 1), modelos, agencias));
         }
         return carroList;
     }
 
-    public static Carro gerarCarro(int i, List<Marca> marcas) {
+    public static Carro gerarCarro(int i, List<Modelo> modelos, List<Agencia> agencias) {
         Carro carro = new Carro();
         Random r = new Random();
         Year year = Year.of(years[r.nextInt(years.length - 1)]);
         carro.setId(i);
-        carro.setModelo(modelos[r.nextInt(modelos.length - 1)]);
-        carro.setMarca(marcas.get(r.nextInt(marcas.size() - 1)));
+        carro.setModelo(modelos.get(r.nextInt(modelos.size() - 1)));
+        carro.setMarca(marcas[r.nextInt(marcas.length - 1)]);
         carro.setPlaca(placas[r.nextInt(placas.length - 1)]);
         carro.setRenavam(renavams[r.nextInt(renavams.length - 1)]);
         carro.setAno(year);
         carro.setNumeroBancos(getModuloFormatado(i));
         carro.setNumeroPortas(getModuloFormatado(i + 1));
-        carro.setQuilometrosRodados(r.nextGaussian()*100 + 100);
+        carro.setQuilometrosRodados(r.nextGaussian()*100 + 1000);
         carro.setStatusLocacao(DominioStatusLocacao.D);
+        carro.setAgencia(agencias.get(i - 1));
+        carro.setCor(cores[r.nextInt(cores.length - 1)]);
+        carro.setValorDiaria(r.nextGaussian()*5 + 30);
         return carro;
     }
 

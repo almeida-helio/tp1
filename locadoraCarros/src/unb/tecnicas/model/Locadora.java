@@ -1,20 +1,34 @@
 package unb.tecnicas.model;
 
-import java.util.List;
-
 public class Locadora extends  PessoaJuridica{
 
-    private int quantidadeAgencia;
+    private String presidente;
 
-    public int getQuantidadeAgencia() {
-        return quantidadeAgencia;
+    private String vicePresidente;
+
+    public String getPresidente() {
+        return presidente;
     }
 
-    public void setQuantidadeAgencia(int quantidadeAgencia) {
-        this.quantidadeAgencia = quantidadeAgencia;
+    public void setPresidente(String presidente) {
+        this.presidente = presidente;
+    }
+
+    public String getVicePresidente() {
+        return vicePresidente;
+    }
+
+    public void setVicePresidente(String vicePresidente) {
+        this.vicePresidente = vicePresidente;
     }
 
     public Locadora clone() {
         return (Locadora) super.clone();
+    }
+
+    public void imprime() {
+        super.imprime();
+        System.out.print("\nPresidente: "+ presidente);
+        System.out.print("\nVice-Presidente: "+ vicePresidente);
     }
 }

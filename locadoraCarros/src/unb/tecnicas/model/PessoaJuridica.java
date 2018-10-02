@@ -1,7 +1,5 @@
 package unb.tecnicas.model;
 
-import java.util.List;
-
 public abstract class PessoaJuridica  extends Pessoa{
 
     private String razaoSocial;
@@ -22,15 +20,6 @@ public abstract class PessoaJuridica  extends Pessoa{
 
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
-    }
-
-
-    @Override
-    public String toString() {
-        return "PessoaJuridica{" +
-                "razaoSocial='" + razaoSocial + '\'' +
-                ", cnpj='" + cnpj + '\'' +
-                '}';
     }
 
     public PessoaJuridica clone() {

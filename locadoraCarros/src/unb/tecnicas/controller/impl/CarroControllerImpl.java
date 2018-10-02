@@ -4,7 +4,6 @@ import unb.tecnicas.controller.CarroController;
 import unb.tecnicas.model.Carro;
 import unb.tecnicas.model.enumeration.DominioStatusLocacao;
 import unb.tecnicas.repository.CarroRepository;
-import unb.tecnicas.repository.DatabaseSimulator;
 
 import java.util.List;
 
@@ -59,5 +58,9 @@ public class CarroControllerImpl implements CarroController {
         return this.carroRepository.findAllByStatusLocacao(dominioStatusLocacao);
     }
 
+    @Override
+    public List<Carro> findAllDisponiveisByIdAgencia(int id) {
+        return this.carroRepository.findAllDisponiveisByIdAgencia(id);
+    }
 
 }

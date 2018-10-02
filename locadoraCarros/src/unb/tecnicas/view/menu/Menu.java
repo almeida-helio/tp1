@@ -13,12 +13,6 @@ public abstract class Menu {
     public void menu() {
         Scanner scanner = new Scanner(System.in);
         do {
-            try{
-                Runtime.getRuntime().exec("clear");
-            } catch (IOException i) {
-                System.out.println("Erro ao limpar tela terminal" + i.getMessage());
-                break;
-            }
             imprime();
             int o = scanner.nextInt();
             if (o < 0) {

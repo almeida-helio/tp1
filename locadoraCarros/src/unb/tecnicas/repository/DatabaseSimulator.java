@@ -1,33 +1,36 @@
 package unb.tecnicas.repository;
 
+import unb.tecnicas.carga.AgenciaCarga;
 import unb.tecnicas.carga.CarroCarga;
 import unb.tecnicas.carga.ClienteCarga;
-import unb.tecnicas.carga.MarcaCarga;
+import unb.tecnicas.carga.LocadoraCarga;
+import unb.tecnicas.carga.ModeloCarga;
+import unb.tecnicas.model.Agencia;
 import unb.tecnicas.model.Carro;
 import unb.tecnicas.model.Cliente;
 import unb.tecnicas.model.Locadora;
-import unb.tecnicas.model.Transacao;
+import unb.tecnicas.model.Modelo;
+import unb.tecnicas.model.Operacao;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class DatabaseSimulator {
+public class DatabaseSimulator {
 
-    protected List<Marca> marcaList = MarcaCarga.gerarMarcas();
 
-    protected List<Carro> carroList = CarroCarga.gerarCarros(marcaList);
+    protected List<Modelo> modeloList = ModeloCarga.gerarModelos();
 
-    protected List<Transacao> transacaoList = new ArrayList<>();
+    protected List<Locadora> locadoraList = LocadoraCarga.gerarLocadora();
+
+    protected List<Agencia> agenciaList = AgenciaCarga.gerarAgencias(locadoraList.get(0));
+
+    protected List<Carro> carroList = CarroCarga.gerarCarros(modeloList, agenciaList);
 
     protected List<Cliente> clienteList = ClienteCarga.gerarClientes();
 
-    protected List<Locadora> locadoraList;
+    protected List<Operacao> operacaoList = new ArrayList<>();
 
     public void gerarCarga() {
-        locadoraList.get(0).setCarroList(carroList);
-        locadoraList.get(0).setClienteList(clienteList);
-        locadoraList.get(0).setTransacaoList(transacaoList);
-        locadoraList.get(0).setMarcaList(marcaList);
     }
 
     public List<Cliente> getClienteList() {
@@ -38,11 +41,18 @@ public abstract class DatabaseSimulator {
         return carroList;
     }
 
-    public List<Transacao> getTransacaoList() {
-        return transacaoList;
-    }
 
     public List<Locadora> getLocadoraList() {
         return locadoraList;
+    }
+
+    public List<Operacao> getOperacaoList() { return operacaoList;}
+
+    public List<Modelo> getModeloList() {
+        return modeloList;
+    }
+
+    public List<Agencia> getAgenciaList() {
+        return agenciaList;
     }
 }

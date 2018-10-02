@@ -1,10 +1,8 @@
 package unb.tecnicas.controller.impl;
 
-import unb.tecnicas.repository.ClienteRepository;
 import unb.tecnicas.controller.ClienteController;
-import unb.tecnicas.model.Carro;
 import unb.tecnicas.model.Cliente;
-import unb.tecnicas.model.Transacao;
+import unb.tecnicas.repository.ClienteRepository;
 
 import java.util.List;
 
@@ -54,13 +52,4 @@ public class ClienteControllerImpl implements ClienteController {
     }
 
 
-    @Override
-    public Transacao alugar(Carro carro) {
-        return null;
-    }
-
-    @Override
-    public void devolver(Transacao transacao) {
-
-    }
 }

@@ -15,4 +15,12 @@ public interface OperacaoController {
     Operacao findOne(int id);
 
     List<Operacao> findAll();
+
+    void calculaPreco(Operacao operacao, double valorDiaria);
+
+    void alugar(Operacao operacao);
+
+    void devolver(Operacao operacao);
+
+    List<Operacao> findAllPendente();
 }
